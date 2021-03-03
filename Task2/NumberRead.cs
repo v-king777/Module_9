@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Task2
 {
@@ -9,7 +11,7 @@ namespace Task2
 
         public void Read()
         {
-            Console.WriteLine("Введите '1' для сортировки А-Я или '2' для сортировки Я-А, '3' - для выхода");
+            Console.WriteLine("\nВведите '1' для сортировки А-Я, '2' для сортировки Я-А, '3' - для выхода");
 
             int number = Convert.ToInt32(Console.ReadLine());
 
