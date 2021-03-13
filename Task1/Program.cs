@@ -6,15 +6,16 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Exception[] arrayOfExceptions = new Exception[5];
+            var exceptions = new Exception[]
+            {
+                new ArgumentOutOfRangeException(),
+                new DivideByZeroException(),
+                new InvalidOperationException(),
+                new TimeoutException(),
+                new MyException("Произошла ужасная и непоправимая ошибка!")
+            };
 
-            arrayOfExceptions[0] = new ArgumentOutOfRangeException();
-            arrayOfExceptions[1] = new DivideByZeroException();
-            arrayOfExceptions[2] = new InvalidOperationException();
-            arrayOfExceptions[3] = new TimeoutException();
-            arrayOfExceptions[4] = new MyException("Произошла ужасная и непоправимая ошибка!");
-
-            foreach (var item in arrayOfExceptions)
+            foreach (var item in exceptions)
             {
                 try
                 {
